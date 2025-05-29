@@ -4,7 +4,7 @@
  * @returns {function} - function-getter which allow get value from object by set path
  */
 export function createGetter(path) {
-  let keys = path.split('.');
+  const keys = path.split('.');
   return function(obj) {
     return getInnerValue(obj, keys);
   };
@@ -14,7 +14,7 @@ getInnerValue = function(obj, keys) {
   if (!obj) {
     return obj;
   } else if (!Object.hasOwn(obj, keys[0])) {
-    return undefined;
+    return;
   } else if (keys.length === 1) {
     return obj[keys[0]];
   } else {
