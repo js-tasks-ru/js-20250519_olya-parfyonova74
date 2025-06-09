@@ -32,19 +32,14 @@ export default class NotificationMessage {
           </div>`;
     }
 
-    show(div) {
+    show(container = document.body) {
       if (NotificationMessage.lastShownComponent) {
         NotificationMessage.lastShownComponent.remove();
       }
 
       NotificationMessage.lastShownComponent = this;
 
-
-      if (div) {
-        div.append(this.element);
-      } else {
-        document.body.append(this.element);
-      }
+      container.appendChild(this.element);
 
       this.timerId = setTimeout(() => { 
         this.remove();
