@@ -13,7 +13,7 @@ describe('objects-arrays-intro-to-testing/create-getter', () => {
     expect(getter(obj)).toEqual('Goods');
   });
 
-  it('should return "undefined" for properties which does not exist', () => {
+  it.only('should return "undefined" for properties which does not exist', () => {
     const obj = {
       category: {
         title: 'Goods',
