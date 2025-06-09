@@ -1,7 +1,7 @@
 import { createGetter } from './index.js';
 
 describe('objects-arrays-intro-to-testing/create-getter', () => {
-  it('should return existed properties', () => {
+  it.only('should return existed properties', () => {
     const obj = {
       category: {
         title: 'Goods',
