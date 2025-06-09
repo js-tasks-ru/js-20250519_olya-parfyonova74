@@ -1,7 +1,7 @@
 import { createGetter } from './index.js';
 
 describe('objects-arrays-intro-to-testing/create-getter', () => {
-  it.only('should return existed properties', () => {
+  it('should return existed properties', () => {
     const obj = {
       category: {
         title: 'Goods',
@@ -13,7 +13,7 @@ describe('objects-arrays-intro-to-testing/create-getter', () => {
     expect(getter(obj)).toEqual('Goods');
   });
 
-  it.only('should return "undefined" for properties which does not exist', () => {
+  it('should return "undefined" for properties which does not exist', () => {
     const obj = {
       category: {
         title: 'Goods',
